@@ -26,6 +26,15 @@ Open http://localhost:3000.
 | `npm run test` | Unit/integration tests (Vitest) |
 | `npm run test:e2e` | End-to-end tests (Playwright) |
 
+## Docker
+
+```bash
+docker build -t supplier-management-app .
+docker run -p 3000:3000 supplier-management-app
+```
+
+Uses the Next.js `standalone` output for a minimal runtime image. CI (`.github/workflows/ci.yml`) runs lint, typecheck, tests, build, and a Docker build on every push and pull request.
+
 ## Project structure
 
 ```
